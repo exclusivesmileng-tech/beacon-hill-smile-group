@@ -16,9 +16,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <motion.main
         key={location.pathname}
-        initial={{ opacity: 0, y: 6 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.28, ease }}
+        exit={{ opacity: 0, y: -12 }}
+        transition={{ duration: 0.45, ease }}
         className={`flex-1 pb-mobile-nav lg:pb-0 ${isHome ? "" : "pt-16 md:pt-20"}`}
       >
         {children}

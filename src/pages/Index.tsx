@@ -171,9 +171,9 @@ const Index = () => (
                   src="/images/group.png"
                   alt="Beaconhill Smile Group team"
                   loading="lazy"
-                  className="w-full object-cover aspect-[4/5]"
+                  className="w-full object-cover aspect-[3/2]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-foreground/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-foreground/40 to-transparent" />
               </motion.div>
 
               {/* Floating card — top left */}
@@ -182,7 +182,7 @@ const Index = () => (
                 initial={{ opacity: 0, x: -20, y: -10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.6, ease }}
+                transition={{ delay: 0.35, duration: 0.6, ease }}
                 whileHover={{ scale: 1.06, y: -2 }}
               >
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -194,13 +194,31 @@ const Index = () => (
                 </div>
               </motion.div>
 
+              {/* Floating card — top right */}
+              <motion.div
+                className="absolute -top-5 -right-5 bg-background rounded-2xl px-5 py-4 shadow-elevated border border-border/50 flex items-center gap-3"
+                initial={{ opacity: 0, x: 20, y: -10 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4, duration: 0.6, ease }}
+                whileHover={{ scale: 1.06, y: -2 }}
+              >
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Building className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-display font-bold text-xl text-primary leading-none">7+</div>
+                  <div className="text-xs text-muted-foreground mt-0.5">Businesses</div>
+                </div>
+              </motion.div>
+
               {/* Floating card — bottom left */}
               <motion.div
                 className="absolute -bottom-5 -left-5 bg-background rounded-2xl px-5 py-4 shadow-elevated border border-border/50 flex items-center gap-3"
                 initial={{ opacity: 0, x: -20, y: 10 }}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.55, duration: 0.6, ease }}
+                transition={{ delay: 0.5, duration: 0.6, ease }}
                 whileHover={{ scale: 1.06, y: 2 }}
               >
                 <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
@@ -212,14 +230,14 @@ const Index = () => (
                 </div>
               </motion.div>
 
-              {/* Floating card — right */}
+              {/* Floating card — bottom right */}
               <motion.div
-                className="absolute top-1/2 -right-5 -translate-y-1/2 bg-background rounded-2xl px-5 py-4 shadow-elevated border border-border/50 flex items-center gap-3"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className="absolute -bottom-5 -right-5 bg-background rounded-2xl px-5 py-4 shadow-elevated border border-border/50 flex items-center gap-3"
+                initial={{ opacity: 0, x: 20, y: 10 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.6, ease }}
-                whileHover={{ scale: 1.06, x: 2 }}
+                transition={{ delay: 0.55, duration: 0.6, ease }}
+                whileHover={{ scale: 1.06, y: 2 }}
               >
                 <div className="w-10 h-10 rounded-xl bg-[hsl(145,40%,38%)]/10 flex items-center justify-center">
                   <Users className="w-5 h-5 text-[hsl(145,40%,38%)]" />

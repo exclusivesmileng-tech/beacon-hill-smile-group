@@ -9,10 +9,10 @@ interface Props {
 }
 
 const directionMap = {
-  up:    { y: 32, x: 0 },
-  down:  { y: -32, x: 0 },
-  left:  { y: 0, x: 40 },
-  right: { y: 0, x: -40 },
+  up:    { y: 48, x: 0 },
+  down:  { y: -48, x: 0 },
+  left:  { y: 0, x: 56 },
+  right: { y: 0, x: -56 },
 };
 
 const AnimatedSection = ({ children, className = "", delay = 0, direction = "up" }: Props) => {
@@ -21,11 +21,11 @@ const AnimatedSection = ({ children, className = "", delay = 0, direction = "up"
     <motion.div
       initial={{ opacity: 0, x, y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-40px" }}
       transition={{
-        duration: 0.7,
+        duration: 0.85,
         delay,
-        ease: [0.22, 1, 0.36, 1], // custom spring-like ease
+        ease: [0.16, 1, 0.3, 1],
       }}
       className={className}
     >
