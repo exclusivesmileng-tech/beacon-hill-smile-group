@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center">
           <img
-            src={transparent ? "/images/logo_white.png" : "/images/logo.png"}
+            src="/images/logo_white.png"
             alt="Beaconhill Smile Group"
             className="w-36 md:w-44 h-auto object-contain transition-opacity duration-300"
           />

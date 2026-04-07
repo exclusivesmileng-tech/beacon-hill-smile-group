@@ -41,12 +41,11 @@ const HeroSection = () => {
     {/* Background image */}
     <div className="absolute inset-0">
       <motion.img
-        src="/images/hero3.png"
+        src="/images/hero.png"
         alt="Hero background"
         className="w-full h-full object-cover scale-x-[-1]"
-        initial={{ scale: 1.15 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 6, ease: "easeOut" }}
+        animate={{ scale: [1.08, 1.18, 1.08] }}
+        transition={{ duration: 10, ease: "easeInOut", repeat: Infinity }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/75 to-foreground/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-foreground/20" />

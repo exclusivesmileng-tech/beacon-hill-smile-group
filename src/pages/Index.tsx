@@ -168,11 +168,9 @@ const Index = () => (
                 transition={{ duration: 0.5, ease }}
               >
                 <img
-                  src={doctorImg}
-                  alt="Beaconhill Smile Group healthcare professional"
+                  src="/images/group.png"
+                  alt="Beaconhill Smile Group team"
                   loading="lazy"
-                  width={800}
-                  height={1024}
                   className="w-full object-cover aspect-[4/5]"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-foreground/40 to-transparent" />
@@ -419,7 +417,7 @@ const Index = () => (
               <Heart className="w-3.5 h-3.5" /> Beaconhill Foundation
             </span>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground leading-tight mb-6">
-              <span className="gradient-text-foundation">1 Million Smiles</span> Initiative
+              1 Million <span className="gradient-text-foundation font-bold">Smiles</span> Initiative
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Through the Beaconhill Foundation, we're on a mission to deliver free dental and healthcare services to one million underserved individuals across Africa — reaching schools, communities, and those who need it most.
@@ -502,7 +500,11 @@ const Index = () => (
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
         >
-          {["Victoria Island Clinic", "Lekki Clinic", "Ikeja Clinic"].map((name, i) => (
+          {[
+            { name: "Victoria Island Clinic", address: "Victoria Island", city: "Lagos, Nigeria", services: "Dental · Eye Care · Dermatology · Medical" },
+            { name: "Ikeja Clinic", address: "Ikeja", city: "Lagos, Nigeria", services: "Dental · Eye Care · Dermatology · Medical" },
+            { name: "Beaconhill Global LLC", address: "5916 Jonesboro Road", city: "Morrow, GA 30260", services: "Dental · Eye Care · Dermatology · Medical" },
+          ].map((clinic, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
@@ -518,16 +520,17 @@ const Index = () => (
                   <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 </motion.div>
                 <div>
-                  <h3 className="font-display font-semibold text-foreground">{name}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">Lagos, Nigeria</p>
+                  <h3 className="font-display font-semibold text-foreground">{clinic.name}</h3>
+                  <p className="text-sm text-muted-foreground mt-0.5">{clinic.address}</p>
+                  <p className="text-sm text-muted-foreground">{clinic.city}</p>
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground">Dental · Eye Care · Dermatology · Medical</p>
+              <p className="text-sm text-muted-foreground">{clinic.services}</p>
             </motion.div>
           ))}
         </motion.div>
         <AnimatedSection className="text-center">
-          <p className="text-muted-foreground mb-4">Expanding across Nigeria and Africa</p>
+          <p className="text-muted-foreground mb-4">Expanding across the US, Nigeria and Africa</p>
           <Button asChild variant="outline">
             <Link to="/clinics">View All Locations</Link>
           </Button>
@@ -543,10 +546,10 @@ const Index = () => (
           src={heroClinicImg}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-primary/30" />
       </div>
       {/* Subtle animated orb */}
       <motion.div
