@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 12%;
+
+    --primary: 198 72% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Brand green — matches "hill" in logo */
+    --brand-green: 84 55% 40%;
+
+    --secondary: 198 30% 96%;
+    --secondary-foreground: 215 25% 12%;
+
+    --muted: 198 20% 96%;
+    --muted-foreground: 215 14% 46%;
+
+    /* Red — Foundation only */
+    --accent: 350 72% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 198 20% 90%;
+    --input: 198 20% 90%;
+    --ring: 198 72% 40%;
+
+    --radius: 0.625rem;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(198 72% 40%) 0%, hsl(198 72% 26%) 100%);
+    --surface-warm: 40 33% 98%;
+    --surface-blue: 198 40% 97%;
+    --text-subtle: 215 14% 56%;
+    --accent-soft: 350 72% 44% / 0.08;
+    --primary-soft: 198 72% 40% / 0.06;
+    --shadow-sm: 0 1px 3px 0 hsl(215 25% 12% / 0.04), 0 1px 2px -1px hsl(215 25% 12% / 0.04);
+    --shadow-md: 0 4px 16px -2px hsl(215 25% 12% / 0.06), 0 2px 4px -2px hsl(215 25% 12% / 0.04);
+    --shadow-lg: 0 10px 32px -4px hsl(215 25% 12% / 0.08), 0 4px 8px -4px hsl(215 25% 12% / 0.04);
+    --shadow-hero: 0 20px 60px -10px hsl(198 72% 40% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 198 72% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 198 30% 96%;
+    --sidebar-accent-foreground: 215 25% 12%;
+    --sidebar-border: 198 20% 90%;
+    --sidebar-ring: 198 72% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Animated gradient text — blue & green (brand colors) */
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      hsl(198, 72%, 40%) 0%,
+      hsl(84, 55%, 40%) 30%,
+      hsl(198, 72%, 55%) 60%,
+      hsl(84, 55%, 52%) 80%,
+      hsl(198, 72%, 40%) 100%
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  /* Foundation gradient — blue & red */
+  .gradient-text-foundation {
+    background: linear-gradient(
+      135deg,
+      hsl(198, 72%, 40%) 0%,
+      hsl(350, 72%, 44%) 30%,
+      hsl(198, 72%, 55%) 60%,
+      hsl(350, 72%, 55%) 80%,
+      hsl(198, 72%, 40%) 100%
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  /* Animated gradient text — brand blue & green (on dark bg) */
+  .gradient-text-light {
+    background: linear-gradient(
+      135deg,
+      hsl(198, 72%, 70%) 0%,
+      hsl(84, 65%, 62%) 25%,
+      hsl(198, 80%, 78%) 50%,
+      hsl(84, 65%, 70%) 75%,
+      hsl(198, 72%, 70%) 100%
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  /* gradient-text-brand — blue & green (brand, on light bg) */
+  .gradient-text-brand {
+    background: linear-gradient(
+      135deg,
+      hsl(198, 72%, 38%) 0%,
+      hsl(84, 55%, 40%) 33%,
+      hsl(198, 72%, 52%) 66%,
+      hsl(84, 55%, 44%) 100%
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-shift 7s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}

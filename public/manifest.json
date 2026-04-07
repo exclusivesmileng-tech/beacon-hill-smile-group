@@ -1,0 +1,39 @@
+{
+  "name": "Beaconhill Smile Group",
+  "short_name": "Beaconhill",
+  "description": "Premium multi-specialty healthcare across Africa",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#268fa8",
+  "categories": ["health", "medical"],
+  "icons": [
+    {
+      "src": "/images/logo_white.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/logo_white.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "url": "/contact",
+      "description": "Book a healthcare appointment"
+    },
+    {
+      "name": "Our Businesses",
+      "short_name": "Businesses",
+      "url": "/businesses"
+    }
+  ]
+}
