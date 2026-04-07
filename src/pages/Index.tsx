@@ -609,7 +609,7 @@ const Index = () => (
           >
             <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} transition={{ type: "spring", stiffness: 400, damping: 20 }}>
               <Button asChild size="lg" variant="secondary" className="font-semibold">
-                <Link to="/contact">
+                <Link to="/book">
                   Book Appointment
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>

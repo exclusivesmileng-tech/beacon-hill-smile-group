@@ -91,7 +91,7 @@ const Services = () => (
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.48 }}
               className="flex items-center gap-4 flex-wrap">
               <Button asChild size="lg" className="bg-brand-green hover:bg-brand-green/90 text-white rounded-full px-8 font-semibold shadow-lg">
-                <Link to="/contact">Book Appointment <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/book">Book Appointment <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
               <Button asChild variant="ghost" size="lg" className="text-white/65 hover:text-white hover:bg-white/5 rounded-full px-6">
                 <Link to="/businesses">Our Businesses</Link>
@@ -129,7 +129,7 @@ const Services = () => (
                 ))}
               </div>
               <Button asChild>
-                <Link to="/contact">Book Appointment <ArrowRight className="ml-2 w-4 h-4" /></Link>
+                <Link to="/book">Book Appointment <ArrowRight className="ml-2 w-4 h-4" /></Link>
               </Button>
             </AnimatedSection>
           </div>

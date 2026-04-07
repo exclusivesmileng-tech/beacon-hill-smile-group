@@ -16,6 +16,7 @@ import Partners from "./pages/Partners.tsx";
 import Insights from "./pages/Insights.tsx";
 import InsightArticle from "./pages/InsightArticle.tsx";
 import Contact from "./pages/Contact.tsx";
+import BookAppointment from "./pages/BookAppointment.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import DrAkinbobola from "./pages/leadership/DrAkinbobola.tsx";
 import MrsAkinbobola from "./pages/leadership/MrsAkinbobola.tsx";
@@ -46,6 +47,7 @@ const AnimatedRoutes = () => {
           <Route path="/insights" element={<Insights />} />
           <Route path="/insights/:slug" element={<InsightArticle />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/book" element={<BookAppointment />} />
           <Route path="/leadership/dr-akinbobola" element={<DrAkinbobola />} />
           <Route path="/leadership/mrs-akinbobola" element={<MrsAkinbobola />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

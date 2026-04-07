@@ -234,7 +234,7 @@ export default function MobileNav() {
 
                 {/* Book Appointment CTA */}
                 <Link
-                  to="/contact"
+                  to="/book"
                   onClick={() => setMoreOpen(false)}
                   className="flex items-center justify-between w-full bg-brand-green text-white rounded-2xl px-5 py-4 font-semibold text-sm active:scale-[0.97] transition-transform duration-150 mb-3"
                 >

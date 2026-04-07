@@ -73,7 +73,7 @@ const Navbar = () => {
             variant={transparent ? "outline" : "default"}
             className={transparent ? "border-white/60 text-white bg-transparent hover:bg-white/10 hover:text-white" : ""}
           >
-            <Link to="/contact">Book Appointment</Link>
+            <Link to="/book">Book Appointment</Link>
           </Button>
         </div>
 
